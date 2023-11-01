@@ -2338,7 +2338,8 @@ class PlayState extends MusicBeatState
 		scoreTxt.text = 'Score: ' + songScore
 		+ ' | Misses: ' + songMisses
 		+ ' | Rating: ' + ratingName
-		+ (ratingName != '?' ? ' (${Highscore.floorDecimal(ratingPercent * 100, 2)}%) - $ratingFC' : '');
+		+ ' | Health: ' + Math.round(health * 50) + '%'
+		+ (ratingName != '?' ? ' (${Highscore.floorDecimal(ratingPercent * 100, 2)}%) - [$ratingFC]': '');
 
 		if(ClientPrefs.scoreZoom && !miss && !cpuControlled)
 		{
